@@ -12,6 +12,8 @@ html {
 body{
     background: linear-gradient(to right, #a3d7f8, #e0c6a1, #c3f4f7);
     color: #ed0d0d;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
 
@@ -19,6 +21,7 @@ body{
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
 section {
@@ -43,18 +46,14 @@ header {
     background-color: #be5f50;
     color: rgb(5, 0, 2);
     padding: 12px 0;
-}
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .vivek{
     height: 260px;
     border: 2px solid red;
     border-radius: 155px;
+
 }
 
 
@@ -73,8 +72,15 @@ nav {
     border-radius: 30px;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .nav-links {
     display: flex;
+    gap: 0.5rem;
     @media (max-width: 768px) {
         .nav-links {
           flex-direction: column;
@@ -99,17 +105,19 @@ nav {
 .para {
     background-color: #032b25;
     color: white;
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 .para-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .para-text {
     max-width: 500px;
+    flex: 1 1 300px;
 }
 
 .para h1 {
@@ -130,11 +138,13 @@ nav {
 }
 
 .para-image {
+    margin-top: 1rem;
     opacity: 0.5;
     width: 200px;
     height: 200px;
     background-color: #032b25;
     border-radius: 50%;
+    flex: 1 1 300px;
 }
 
 .highlight2{
@@ -246,33 +256,70 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
+.video-card iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    .video-card {
+        padding: 8px;
+    }
+
+    .video-caption {
+        font-size: 14px;
+    }
+}
+
+
 .video-caption {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 14px;
+    text-decoration: underline;
+    font-family: cursive;
+    margin-top: 5px;
+    font-weight: bolder;
+    font-size: 17px;
+    cursor: pointer;
 }
 
 
 .linkedln-botton {
-    background-color: #ff7a59;
+    margin-top: 40px;
+    background-color: #fd3604;
     color: white;
     border: none;
     padding: 12px 25px;
     border-radius: 6px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 30px;
     display: inline-block;
     text-decoration: none;
+    text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .linkedln-botton:hover {
-    background-color: #ff4d2f;
+    background-color: #1a6555;
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .linkedln-botton {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 }
 
 .projects-section {
@@ -304,13 +351,20 @@ nav {
 }
 
 .project-card {
-    flex: 1;
-    max-width: 350px;
+    flex: 1 1 100px;
+    max-width: 100%;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 .project-card:hover {
@@ -411,6 +465,13 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .education-card {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+}
+
 .education-card:hover {
     transform: translateY(-5px);  
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -484,25 +545,36 @@ nav {
 }
 
 .resume{
-    background-color: #ff7a59;
+    background-color: #fd3503;
     color: white;
     border: none;
     padding: 12px 25px;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin: 20px auto 30px auto;
     display: inline-block;
     text-decoration: none;
     align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
+    font-size: 16px;
+    max-width: 90%;
+    box-sizing: border-box;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .resume:hover {
-    background-color: #ff4d2f;
+    background-color: #1a6555;
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .resume {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 }
 
 a {
@@ -521,11 +593,11 @@ a:hover{
 
 
 .footer {
+    text-align: center;
+    padding: 1rem;
     background-color: #222;
     color: white;
-    padding: 40px 0;
-    text-align: center;
-    font-size: 16px;
+    margin-top: 2rem;
 }
 
 .footer a {
@@ -537,4 +609,125 @@ a:hover{
 .footer a:hover {
     text-decoration: underline;
 }
+
+
+@media (max-width: 768px) {
+    .education-card {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+
+    .education-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .resume {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-title {
+        font-size: 24px;
+    }
+
+    .contact-description {
+        font-size: 13px;
+    }
+
+    .resume {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .social-link {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .social-links {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .para-content, .skills-grid, .education-grid, .projects-grid, .video-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skills-part, .project-card, .education-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .para-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .resume, .linkedln-botton {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
