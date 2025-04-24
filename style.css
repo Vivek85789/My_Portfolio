@@ -36,10 +36,19 @@ h1, h2, h3 {
 }
 
 p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 20px;
     font-family: 'Lora', serif;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 }
 
 header {
@@ -116,18 +125,18 @@ nav {
 }
 
 .para-text {
-    max-width: 500px;
+    max-width: 800px;
     flex: 1 1 300px;
 }
 
 .para h1 {
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 13px;
 }
 
 .para-subtitle {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -169,7 +178,7 @@ nav {
     background-color: #cf8ae9;
     color: black;
     margin-bottom: 30px;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .skills-grid {
@@ -337,7 +346,7 @@ nav {
 .projects-description {
     background-color: #cf8ae9;
     color: black;
-    font-size: 17px;
+    font-size: 20px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -438,7 +447,7 @@ nav {
 .education-description {
     background-color: #cf8ae9;
     color: #000000;
-    font-size: 17px;
+    font-size: 20px;
     margin-bottom: 30px;
     max-width: 700px;
     margin-left: auto;
@@ -512,7 +521,7 @@ nav {
 .contact-description {
     background-color: #cf8ae9;
     color: black;
-    font-size: 17px;
+    font-size: 20px;
     font-size: medium;
     margin-bottom: 30px;
     max-width: 700px;
